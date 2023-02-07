@@ -1,0 +1,19 @@
+.custom{
+    text-align: center;
+    font-size: 200%;
+    /* color : blue */
+}
+
+.urlDiv{
+    border: 1px black solid ;
+    height: 80vh;
+    width: 70vw;
+    background-color: silver;
+}
+
+marquee{
+    font-size: 2rem;
+    color: rgb(15, 14, 14);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 2%;
+}
