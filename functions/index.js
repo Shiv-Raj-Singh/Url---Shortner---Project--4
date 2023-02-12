@@ -12,9 +12,16 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
+
+app.get('/' , (req,res)=>{
+    res.status(200).send('This SHIV-RAJ-SINGH Web site')
+})
 app.post('/url' , createShortUrl )
 app.get('/:urlCode' ,redirectUrl )
 app.use(globalError)
+
+// app.use('/.netlify/functions/index.js')
+
 app.listen(process.env.PORT , ()=>{
     console.log(`App is Running on ${process.env.PORT}`);
 })
