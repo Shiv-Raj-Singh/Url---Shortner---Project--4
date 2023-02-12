@@ -1,22 +1,10 @@
 import {useState } from 'react';
-// import ReactDOM from 'react-dom/client';
-import './url.css'
+import './longUrl.css'
 import axios from 'axios'
 
-const body = document.body
-const headingColor  = document.getElementById('heading')
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-setInterval(()=>{
-    const red = parseInt(Math.random() * 126)     
-    const green = parseInt(Math.random() * 126)     
-    const blue = parseInt(Math.random() * 126)     
-    const rgb = `rgb(${red} , ${green} , ${blue})`
-    const rgb2 = `rgb(${green} ,${blue}, ${red} )`
-
-    headingColor.style.color = rgb
-    body.style.background = rgb2
-  
-}, 5000 )
 
 export default function UrlShort(){
   const [url ,setUrl ] = useState('')
@@ -28,34 +16,50 @@ export default function UrlShort(){
       const response = await axios.post('http://localhost:5000/url' , {url : url})
       setUrl('')
       setNewUrl(response.data.data.shortUrl)
-      console.log(newUrl)
-      alert(response.data.message)
-      
-      // e.mainInput.value = ''
+      toast.success((response.data.message) ,{theme : 'dark', position: "top-center"})
+      // alert(response.data.message)
+
     }catch(err){
       console.log(err)
-      alert(err.response.data.message)
+      setUrl('')
+      setNewUrl('')
+      err.response.data.status == false ? toast.error((err.response.data.message) ,{theme : 'dark', 
+      position: "top-center"}): toast.error('Something Wrong' , {theme : 'red'})
+      // toast.success((response.data.message) ,{theme : 'dark', position: "top-center"})
+      // alert('Something Wrong !')
     }
   }
 
-
     return (
       <>
-        <marquee behavior="" direction="left-right"><h2> URL - SHORTENER </h2>  </marquee>
+      <div>
+    <marquee behavior="" direction="left-right"> URL - SHORTENER </marquee>
         <div className='urlDiv container mt-2'>
             <form className="container mt-5 " method='POST'>
-  <div className="mb-3 ">
-    <label for="exampleInputEmail1" className="h1 custom" id='heading'>Enter Url Here !</label>
-    <input type="text" value={url} className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"onChange={(e)=> setUrl(e.target.value)} />
+      <div className="mb-3 ">
+      <label htmlFor="exampleInputEmail1" className="custom" id='heading'>Enter Your Long Url Here</label>
+      <input type="text" value={url} className="form-control" id="exampleInputEmail1" required aria-describedby="emailHelp"onChange={(e)=> setUrl(e.target.value)} />
   </div>
 
-  <button type="submit" className="btn btn-primary" onClick={onSubmit}>Submit</button>
+  <button type="submit" className="btn btn-primary btn1" onClick={onSubmit}>Submit</button>
 </form>
 
 {
-  newUrl!=='' ? <h1 style={{textAlign:"center" , color : "darkRed"}} >{newUrl}</h1> : ''
+  newUrl!=='' ? <h3 style={{
+    textAlign:"center" ,
+    // display:'inline' , 
+    width : "40vw",
+    color : "silver", 
+    // background
+    backgroundImage: "linear-gradient(direction, color-stop1, color-stop2, ...)",
+    marginTop : "2%",
+    // margin : "auto"
+    
+    }} >{newUrl}</h3> : ''
 }
         </div>
+      </div>
+      <ToastContainer />
       </>
    )
 }

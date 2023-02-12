@@ -1,10 +1,11 @@
-import Navbar from "./components/Navbar.js";
+import Navbar from "./components/backGround";
 import Url from "./components/Url.js";
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/> */}
+      <Navbar/>
       <Url/>
     </div>
   );
