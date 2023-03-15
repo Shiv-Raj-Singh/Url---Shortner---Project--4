@@ -3,9 +3,9 @@
     "version": 2,
     "name": "nodejs-express",
     "builds": [
-        { "src": "src", "use": "@now/node" }
+        { "src": "/src", "use": "@now/node" }
     ],
     "routes": [
-        { "src": "/(.*)", "dest": "src/index.js" }
+        { "src": "/(.*)", "dest": "/src/index.js" }
     ]
 }
