@@ -10,6 +10,10 @@ const urlSchema = new Schema(
         type: String,
         unique: true, 
     } ,
+    shortId :{
+        type: String,
+        unique: true, 
+    },
     shortUrl:{
         type: String, 
         unique: true, 

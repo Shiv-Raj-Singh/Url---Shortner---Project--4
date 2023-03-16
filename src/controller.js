@@ -29,7 +29,7 @@ export default catchAsync(async function createShortUrl(req,res,next){
     const urlCode = shortid.generate().toLowerCase() 
     const shortUrl = baseUrl + urlCode
 
-    const obj = { urlCode : urlCode , longUrl : req.body.url , shortUrl : shortUrl }
+    const obj = { urlCode : urlCode , longUrl : req.body.url , shortUrl : shortUrl , shortId : urlCode }
 
     const existUrl = await model.findOne({longUrl : req.body.url })
     if(existUrl) return res.status(200).json( {  status : true , message : 'Data From cache' , data : existUrl })

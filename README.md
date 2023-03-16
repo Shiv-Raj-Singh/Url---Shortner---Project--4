@@ -31,3 +31,23 @@ An URL shortener is a website that reduces the length of your URL (Uniform Resou
 - mongoose
 - shortid
 - valid-url
+
+
+# Error Response 
+
+```
+Error Response  = {
+      status : false , 
+      message : '' 
+}
+```
+
+# Successful Response 
+
+```
+response = {
+      status : true , 
+      message : 'Data From ( DataBase/ Redis )' , 
+      data : data }
+```
+
