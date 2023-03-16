@@ -1,6 +1,7 @@
 import {Schema , model} from 'mongoose';
 
-const urlSchema = new Schema({
+const urlSchema = new Schema(
+    {
     urlCode: {
         type: String, 
         unique : true
