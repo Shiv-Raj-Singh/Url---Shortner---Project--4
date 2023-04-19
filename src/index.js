@@ -14,7 +14,7 @@ app.use(cors())
 
 
 app.get('/' , (req,res)=>{
-    res.status(200).send('This SHIV-RAJ-SINGH Web site')
+    res.status(200).send('Hii WELCOME ON SHIVRAJ URL-SHORTEN APP ! ')
 })
 app.post('/url' , createShortUrl )
 app.get('/:urlCode' ,redirectUrl )
