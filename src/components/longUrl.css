@@ -37,14 +37,18 @@
 
 marquee{
     font-size: 2rem;
-    color: rgb(224, 210, 210);
+    width: 30vw;
+    color: rgb(125, 224, 11);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    /* margin: auto; */
+    /* border: 2px solid yellow; */
     margin-top: 2%;
 }
 
 marquee:hover{
     font-size: 2.2rem;
-    color: black;
+    color: rgb(250, 120, 120);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 2%;
 }
@@ -59,9 +63,10 @@ input:focus{
 .custom:hover{
     margin-bottom: 2%;
     display: block;
-    color: rgb(21, 24, 18);
+    color: rgb(187, 248, 125);
     font-weight: 700;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace , Arial, Helvetica, sans-serif;
+    /* font-family: 'Courier New', Courier, monospace , Arial, Helvetica, sans-serif; */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2rem;
 }

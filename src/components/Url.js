@@ -13,7 +13,7 @@ export default function UrlShort(){
   const onSubmit = async (e)=>{
     e.preventDefault()
     try{
-      const response = await axios.post('http://localhost:5000/url' , {url : url})
+      const response = await axios.post('https://url-shorten.onrender.com/url' , {url : url})
       setUrl('')
       setNewUrl(response.data.data.shortUrl)
       toast.success((response.data.message) ,{theme : 'dark', position: "top-center"})
@@ -23,8 +23,10 @@ export default function UrlShort(){
       console.log(err)
       setUrl('')
       setNewUrl('')
-      err.response.data.status == false ? toast.error((err.response.data.message) ,{theme : 'dark', 
-      position: "top-center"}): toast.error('Something Wrong' , {theme : 'red'})
+      // toast.error('Something Wrong' , {theme : 'red'})
+      if(err.message == 'Network Error') toast.error('Something Went Wrong' , {theme : 'red'})
+      err.response.data.status == false ? toast.error((err.response.data.message) ,{theme : 'dark', position: "top-center"}): 
+      toast.error('Something Wrong' , {theme : 'red'})
       // toast.success((response.data.message) ,{theme : 'dark', position: "top-center"})
       // alert('Something Wrong !')
     }
@@ -48,7 +50,7 @@ export default function UrlShort(){
   newUrl!=='' ? <h3 style={{
     textAlign:"center" ,
     // display:'inline' , 
-    width : "40vw",
+    width : "70vw",
     color : "silver", 
     // background
     backgroundImage: "linear-gradient(direction, color-stop1, color-stop2, ...)",
