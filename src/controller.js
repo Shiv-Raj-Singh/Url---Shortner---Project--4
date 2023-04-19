@@ -25,7 +25,7 @@ export default catchAsync(async function createShortUrl(req,res,next){
     
     // console.log(axData)
    
-    const baseUrl = 'http://localhost:5000/'
+    const baseUrl = 'https://url-shorten.onrender.com/'
     const urlCode = shortid.generate().toLowerCase() 
     const shortUrl = baseUrl + urlCode
 
