@@ -3,8 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.custom{
-
+.custom{ 
     margin-bottom: 2%;
     display: block;
     font-size: 200%;
@@ -25,16 +24,24 @@
     width: 20vw;
     padding: 0.5% , 2%;
     margin: auto;
-
 }
 
 .urlDiv{
     /* border: 1px black solid ; */
     height: 70vh;
     width: 70vw;
-    /* background-color: silver; */
+    /* background-color: rgb(57, 158, 11); */
 }
-
+.newUrl{
+    width : fit-content;
+    color : rgb(114, 14, 230);
+    font-size: 2em;
+    border: 1px dotted yellow ;
+    text-align: center;
+    padding: 4%;
+    background-color: lightgreen;
+    margin: 10%  auto;
+}
 marquee{
     font-size: 2rem;
     width: 30vw;
@@ -47,7 +54,6 @@ marquee{
 }
 
 marquee:hover{
-    font-size: 2.2rem;
     color: rgb(250, 120, 120);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin-top: 2%;
@@ -68,5 +74,41 @@ input:focus{
     text-align: center;
     /* font-family: 'Courier New', Courier, monospace , Arial, Helvetica, sans-serif; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2rem;
+}
+
+@media(max-width : 700px){
+    .custom{
+        margin-bottom: 2%;
+        display: block;
+        font-size: 200%;
+        color: rgb(149, 235, 69);
+        font-weight: 700;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1rem;
+    }
+    .urlDiv{
+        /* border: 1px black solid ; */
+        height: 70vh;
+        width: 100vw;
+        /* background-color: rgb(57, 158, 11); */
+    }
+
+    .btn{
+        color: rgb(176, 236, 10);
+        background-color: rgb(55, 54, 139);
+        width: 50vw;
+    }
+    
+    #exampleInputEmail1{
+        width: 90%;
+        margin: auto;
+    }
+    .newUrl{
+        width : 80vw;
+        color : gold;
+        background-color: rgb(54, 36, 36);
+        font-size: 0.8em;
+        margin: 10%  auto;
+    }
 }

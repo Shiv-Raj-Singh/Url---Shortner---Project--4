@@ -47,17 +47,7 @@ export default function UrlShort(){
 </form>
 
 {
-  newUrl!=='' ? <h3 style={{
-    textAlign:"center" ,
-    // display:'inline' , 
-    width : "70vw",
-    color : "silver", 
-    // background
-    backgroundImage: "linear-gradient(direction, color-stop1, color-stop2, ...)",
-    marginTop : "2%",
-    // margin : "auto"
-    
-    }} >{newUrl}</h3> : ''
+  newUrl!=='' ? <h3 className='newUrl' >{newUrl}</h3> : ''
 }
         </div>
       </div>
