@@ -109,6 +109,6 @@ input:focus{
         color : gold;
         background-color: rgb(54, 36, 36);
         font-size: 0.8em;
-        margin: 10%  auto;
+        margin: 10%  auto;  
     }
 }
