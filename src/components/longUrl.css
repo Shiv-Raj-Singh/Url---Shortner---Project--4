@@ -46,7 +46,7 @@ marquee{
     font-size: 2rem;
     width: 30vw;
     color: rgb(125, 224, 11);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Brush Script MT', cursive;;
     text-align: center;
     /* margin: auto; */
     /* border: 2px solid yellow; */
@@ -105,10 +105,21 @@ input:focus{
         margin: auto;
     }
     .newUrl{
-        width : 80vw;
+        width : 90vw;
+        max-width: fit-content;
         color : gold;
         background-color: rgb(54, 36, 36);
         font-size: 0.8em;
         margin: 10%  auto;  
+    }
+    marquee{
+        font-size: 1.5rem;
+        margin: 5%;
+        width: 60vw;
+        color: rgb(125, 224, 11);
+        font-family: 'Brush Script MT', cursive;;
+        text-align: center;
+        /* margin: auto; */
+        /* border: 2px solid yellow; */
     }
 }
